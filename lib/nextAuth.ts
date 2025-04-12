@@ -13,6 +13,9 @@ export const authOptions: AuthOptions = {
     maxAge: 1 * 24 * 60 * 60, // 1 day
   },
   secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: "/auth/signin",
+  },
 };
 
 export default NextAuth(authOptions);
